@@ -43,3 +43,7 @@
   .post h1 a, .post h1 a:visited {
     color: #000000;
   }
+
+  .intruder-image-list{
+    object-fit: cover;
+  }
