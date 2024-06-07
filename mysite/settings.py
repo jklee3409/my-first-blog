@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-aq+^ikcygw%mr8ns&m)#6j=8r@oauts@#fx3ls3a-+2k1zg@9-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '10.0.2.2', '.pythonanywhere.com']
 
 
 # Application definition
@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3')
+        'NAME': BASE_DIR / 'db.sqlite3'
     }
 }
 
@@ -121,13 +121,12 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media/"
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / "media/"
 
 
 REST_FRAMEWORK = {
@@ -136,3 +135,5 @@ REST_FRAMEWORK = {
   ],
   'PAGE_SIZE' : 10
 }
+
+
